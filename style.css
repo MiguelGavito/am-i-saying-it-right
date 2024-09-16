@@ -1,5 +1,21 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
     text-align: center;
 } 
+
+#resultado span {
+    font-size: 1.5em;
+}
+
+/* Colores de los fonemas */
+.igual {
+    color: black;
+}
+
+.similar {
+    color: blue;
+}
+
+.diferente {
+    color: red;
+}
