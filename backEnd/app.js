@@ -1,3 +1,69 @@
+/*import React, { useState } from 'react';
+import './app.css';
+
+function App() {
+  const [inputWord, setInputWord] = useState('');
+  const [transcription, setTranscription] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  // Simula una llamada al backend para obtener la transcripción AFI y los colores
+  const fetchTranscription = async (word) => {
+    setLoading(true);
+
+    // Simulación de datos devueltos por la API
+    const simulatedResponse = [
+      { character: "h", color: "green" },
+      { character: "ə", color: "yellow" },
+      { character: "l", color: "red" },
+      { character: "oʊ", color: "yellow" }
+    ];
+
+    // Simular un pequeño retraso
+    setTimeout(() => {
+      setTranscription(simulatedResponse);
+      setLoading(false);
+    }, 500);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (inputWord.trim()) {
+      fetchTranscription(inputWord);
+    }
+  };
+
+  return (
+    <div className="app">
+      <h1>Pronunciación AFI con Colores</h1>
+
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Ingresa una palabra"
+          value={inputWord}
+          onChange={(e) => setInputWord(e.target.value)}
+        />
+        <button type="submit">Buscar</button>
+      </form>
+
+      {loading && <p>Cargando transcripción...</p>}
+
+      <div className="transcription">
+        {transcription.map((item, index) => (
+          <span
+            key={index}
+            style={{ color: item.color, fontSize: '1.5em', margin: '0 5px' }}
+          >
+            {item.character}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default app;
+*/
 const fonemasIngles = [
     'iː', 'ɪ', 'e', 'æ', 'ɑː', 'ɒ', 'ɔː', 'ʊ', 'uː', 'ʌ', 'ə',  // Vocales
     'aɪ', 'eɪ', 'aʊ', 'ɔɪ', 'əʊ', 'oʊ',  // Diptongos
@@ -47,3 +113,4 @@ function esSimilarAEspanol(fonema) {
     const similares = ['ʃ', 'ʒ', 'ð', 'θ', 'ŋ', 'v', 'z'];
     return similares.includes(fonema);
 }
+
