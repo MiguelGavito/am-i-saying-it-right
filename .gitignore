@@ -24,4 +24,7 @@ dist-ssr
 *.sw?
 
 # virtrual enviorement
-venv/
+.venv/
+
+# pycache
+__pycache__/
